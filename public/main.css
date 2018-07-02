@@ -1,0 +1,27 @@
+    body { background-color: #6FD08C }
+
+            #articles {
+        overflow: auto;
+        width: 60%;
+        height: 300px;
+        padding: 2%;
+        cursor: pointer;
+      }
+
+    #notes {
+      width: 60%;
+      }
+
+    #input {
+        height: 36px;
+        font-size: 24px;
+        padding: 2% 
+    }
+
+    textarea, input {
+        display: block;
+        width: 100%;
+        background-color: #9ED0E6;
+        padding: 2%
+      }
+
