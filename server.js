@@ -13,6 +13,24 @@ app.use(express.static("public"));
 const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/homeworkscraper";
 mongoose.connect(MONGODB_URI);
 
+// var databaseUri = "mongodb://localhost/homeworkscraper";
+
+// if (process.env.MONGODB_URI) {
+//     mongoose.connect(process.env.MONGODB_URI);
+// } else {
+
+// mongoose.connect(databaseUri)
+// }
+
+// var db = mongoose.connection
+
+// db.on('error', function(err){
+//     console.log("Mongoose Error: ", err);
+// });
+
+// db.once('open', function(){
+// console.log("Mongoose Connection success")
+// })
 
 app.get("/scrape", function (req, res) {
     // First, we grab the body of the html with request
