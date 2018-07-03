@@ -10,7 +10,8 @@ var app = express();
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
-mongoose.connect("mongodb://localhost/homeworkscraper");
+const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/homeworkscraper"
+mongoose.connect(MONGODB_URI);
 
 
 app.get("/scrape", function (req, res) {
