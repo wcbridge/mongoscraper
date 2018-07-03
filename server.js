@@ -6,8 +6,8 @@ var cheerio = require("cheerio");
 var db = require("./models");
 var PORT = 8000;
 var app = express();
-
-
+var logger = require("morgan");
+app.use(logger("dev"));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/homeworkscraper";
